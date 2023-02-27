@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('send_css', path='connexion.css') }}">
+  <title>Connexion</title>
+
+</head>
+
+<body>
+  <form action="action_page.php" method="post">
+    <!--NAVBAR-->
+    <nav>
+      <ul class="navigation">
+        <li><a href="index" class="">Accueil</a></li>
+        <li><a href="services" class="">Services</a></li>
+        <li><a href="apropos" class="">A propos</a></li>
+        <li><a href="reservation" class="">Reservation</a></li>
+        <li><a href="contact" class="">Contact</a></li>
+        <li><a href="connexion" class="">Connexion</a></li>
+      </ul>
+    </nav>
+
+    <div class="questionnaire">
+      <h3>Espace professionnel</h3>
+      <label for="uname"><b>E-mail</b></label>
+      <input type="text" placeholder="Enter Username" name="mail" required>
+
+
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Enter Password" name="mdp" required>
+
+      <button type="submit">Connexion</button><br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+      </label>
+    </div>
+    <div class="questionnaire1">
+      <h3>Espace personnel</h3>
+      <label for="uname"><b>E-mail</b></label>
+      <input type="text" placeholder="Enter Username" name="mail" required>
+
+
+      <label for="psw"><b>Mot de passe</b></label>
+      <input type="password" placeholder="Enter Password" name="mdp" required>
+
+      <button type="submit">Connexion</button> <br>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Se souvenir de moi
+      </label>
+    </div>
+
+
+</body>

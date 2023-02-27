@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+   <title>Index</title>
+   <!-- CSS Style -->
+   <link rel="stylesheet" type="text/css" href="{{ url_for('send_css', path='index.css') }}">
+</head>
+
+<body>
+   <div class="header">
+      <!-- Ensemble des élements pour la barre de navigation et bouton de connexion -->
+      <nav>
+         <img src="static/img/logomas" class="logomas">
+         <ul>
+            <li><a href="index">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="apropos">A propos</a></li>
+            <li><a href="reservation">Réservation</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="connexion">Connexion</a></li>
+            <button>
+               <span class="log"> login
+               </span>
+            </button>
+            <button>
+               <span class="sign"> Sign up
+               </span>
+         </ul>
+      </nav>
+   </div>
+   <!-- Section barre_recherche-->
+   <section class="barre_recherche" id="barre_recherche">
+      <!-- Ensemble des élements pour la barre de recherche -->
+      <div class="searchbar" id="searchbar">
+         <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g>
+               <path
+                  d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+               </path>
+            </g>
+         </svg>
+         <input placeholder="Search" type="search" class="input">
+      </div>
+   </section>
+   <!-- Section hero-->
+   <section class="hero" id="hero">
+      <!-- Ensemble des élements pour les boutons "Profils des chiens" et "Reservation" -->
+      <a href="/apropos">
+         <img src="profiltetechiens.png" alt="profiltetechien" loading="lazy" class="icon-profiltetechien">
+      </a>
+      <p>Remplir profil chien</p>
+      <a href="https://www.example.com">
+         <img src="image.jpg" alt="reservation" loading="lazy" class="reservation">
+      </a>
+      <p>Réservation</p>
+   </section>
+   <!-- Section avis-->
+   <section class="avis" id="avis">
+      <h2 class="avis-title">Nos avis clients !<h2>
+            <div class="avis-rubrique" id="avis-rubrique">
+               <div class="avis-note" id="avis-note">
+                  <img src="" alt="" loading="lazy" class="avis-pics">
+                  <img src="" alt="" loading="lazy" class="avis-stars">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente
+                     beatae delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid
+                     facilis doloribus accusantium incidunt quaerat voluptate?>
+               </div>
+               <div class="avis-note" id="avis-note">
+                  <img src="" alt="" loading="lazy" class="avis-pics">
+                  <img src="" alt="" loading="lazy" class="avis-stars">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente
+                     beatae delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid
+                     facilis doloribus accusantium incidunt quaerat voluptate?>
+               </div>
+               <div class="avis-note" id="avis-note">
+                  <img src="" alt="" loading="lazy" class="avis-pics"><img src="" alt="" loading="lazy"
+                     class="avis-stars">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente
+                     beatae delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid
+                     facilis doloribus accusantium incidunt quaerat voluptate?>
+               </div>
+               <div class="avis-note" id="avis-note">
+                  <img src="" alt="" loading="lazy" class="avis-pics">
+                  <img src="" alt="" loading="lazy" class="avis-stars">
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente
+                     beatae delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid
+                     facilis doloribus accusantium incidunt quaerat voluptate?>
+               </div>
+            </div>
+   </section>
+   <!-- Section compteur-->
+   <section class="counter" id="counter">
+      <div class="counter-container" id="counter-container">
+         <h3>Nombre de clients satisfaits : 653</h3>
+         <span id="customer-satisfaction-counter"></span>
+      </div>
+      <div class="counter-container">
+         <h3>Nombre de courses réalisées : 2871</h3>
+         <span id="rides-counter"></span>
+      </div>
+      <div class="image-container">
+         <img src="image1.jpg" alt="Image 1">
+      </div>
+      <div class="image-container">
+         <img src="image2.jpg" alt="Image 2">
+      </div>
+   </section>
+   <!-- fin des compteurs (4 blocs)-->
+   <!-- Section story -->
+   <section class="story" id="story">
+      <div class="histoire" id="histoire">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at nisi eu nisi tempor tristique. Proin dictum
+         ante ac leo aliquam, id tempor velit gravida.
+      </div>
+      <div class="block" id="block">
+         <img src="image.jpg" alt="Image">
+      </div>
+   </section>
+
+   <!-- Section footer-->
+
+   <section class="footer" id="footer">
+      <div class="footer-first" id="footer-first">
+         <p>Dernières annonces | ines@happudog.fr | Mentions légales | Conditions générales | Vie privée |</p>
+         <div class="footer-avis" id="footer-avis">
+            <p>4.4 /5 (3653 avis)</p>
+         </div>
+         <div class="footer-networks" id="footer-networks">
+            <p>suivez-nous Instagram / Facebook
+         </div>
+         <div class="Copyright"></div>
+         <p>MEDORAUSPORT 2021-2026. TOUS DROITS RÉSERVÉS&copy; 2023</p>
+   </section>
+</body>
+
+</html>

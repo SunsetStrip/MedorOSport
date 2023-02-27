@@ -1,0 +1,445 @@
+:root {
+   --font-roboto: "Roboto", sans-serif;
+   --font-krabuler: "krabuler", sans-serif;
+   --font-comfortaa: "Comfortaa Bold", sans-serif;
+   --color-premier: #AD956B;
+   --color-second: #E1A624;
+   --color-troisieme: #317AC1;
+   --color-quatrieme: #384454;
+   --color-cinquieme: #1D3557;
+   --padding-default: 10px;
+   --box-shadow: 0 0 6px 5px grey;
+   --margin-top: 25px;
+   --margin: 10px;
+   --padding: 0px;
+   --border-radius: 10px;
+   --transition: 1.5s;
+}
+
+
+/* CSS PAGE D Accueil */
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-premier);
+}
+
+a:hover {
+   color: var(--color-second);
+
+}
+
+nav {
+   top: 0px;
+   left: 0;
+   align-items: center;
+   display: flex;
+   font-size: 16px;
+   cursor: crosshair;
+   border-color: red;
+}
+
+.searchbar {
+   display: flex;
+   line-height: 28px;
+   align-items: center;
+   position: relative;
+   max-width: 190px;
+}
+
+.input {
+   width: 100%;
+   height: 40px;
+   line-height: 28px;
+   padding: 0 1rem;
+   padding-left: 2.5rem;
+   border: 2px solid transparent;
+   border-radius: 8px;
+   outline: none;
+   background-color: #f3f3f4;
+   color: #0d0c22;
+   transition: .3s ease;
+}
+
+.input::placeholder {
+   color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+   outline: none;
+   border-color: rgba(234, 76, 137, 0.4);
+   background-color: #fff;
+   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+   position: absolute;
+   left: 1rem;
+   fill: #9e9ea7;
+   width: 1rem;
+   height: 1rem;
+}
+
+#header {
+   grid-area: header;
+}
+
+.barre #nav {
+   grid-area: nav
+}
+
+.counter-container {
+   grid-area: compteur;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   height: 100px;
+   margin: 10px;
+   border: 1px solid black;
+   vertical-align: top;
+}
+
+.image-container {
+   display: inline-block;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   height: 100px;
+   margin: 10px;
+   border: 1px solid black;
+}
+
+
+#footer {
+   grid-area: footer;
+}
+
+body {
+   grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "hero hero hero"
+      "avis avis avis"
+      "compteur compteur compteur"
+      "story story story"
+      "footer footer footer"
+}
+
+.colonne {
+   flex: 1;
+   text-align: center;
+}
+
+#avis .section-inner {
+   display: flex;
+}
+
+.section-inner {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+h1 {
+   text-align: center;
+   color: white;
+}
+
+button {
+   display: inline-block;
+   width: 150px;
+   height: 50px;
+   border-radius: 10px;
+   border: 1px solid #03045e;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.5s ease-in;
+   z-index: 1;
+}
+
+button::before,
+button::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   width: 0;
+   height: 100%;
+   transform: skew(15deg);
+   transition: all 0.5s;
+   overflow: hidden;
+   z-index: -1;
+}
+
+button::before {
+   left: -10px;
+   background: #240046;
+}
+
+button::after {
+   right: -10px;
+   background: #5a189a;
+}
+
+button:hover::before,
+button:hover::after {
+   width: 58%;
+}
+
+button:hover span {
+   color: #e0aaff;
+   transition: 0.3s;
+}
+
+button span {
+   color: #03045e;
+   font-size: 18px;
+   transition: all 0.3s ease-in;
+}
+
+
+.questionnaire {
+   float: left;
+   margin: 0;
+   color: #636360;
+   width: 40%;
+   padding: 0 5% 0 5%;
+   top: auto;
+}
+
+.questionnaire1 {
+   float: left;
+   margin: 0;
+   color: #636360;
+   width: 40%;
+   padding: 0 0 0 10px;
+   top: auto;
+}
+
+
+input[type=text],
+input[type=password] {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+/*Page service */
+.Course,
+.Dogsitting,
+.Trotticani,
+.VTT,
+.Skijoering {
+   color: black;
+   font-style: var(--font-roboto);
+   font-size: 14px;
+   display: flex;
+   flex-flow: row wrap;
+}
+
+.Course img,
+.Dogsitting img,
+.Trotticani img,
+.VTT img,
+.Skijoering img {
+   width: 40%;
+   height: 40%;
+}
+
+.Course h2,
+.Dogsitting h2,
+.Trotticani h2,
+.VTT h2,
+.Skijoering h2 {
+   text-decoration: underline;
+}
+
+/* Bas de la page service ne pas toucher*/
+.dressage {
+   color: black;
+   font-style: var(--font-roboto);
+   font-size: 14px;
+   display: flex;
+   flex-flow: row wrap;
+}
+
+/*--------------*/
+.dressage p {
+   width: 50%;
+   height: 50%;
+   align-items: center;
+   margin: var(--margin-top);
+}
+
+.dressage img {
+   width: 40%;
+   height: 40%;
+   margin: 10px;
+}
+
+
+/* bouton revenir en haut de la page */
+#scroll_to_top {
+   position: fixed;
+   width: 25px;
+   height: 25px;
+   bottom: 50px;
+   right: 30px;
+}
+
+#scroll_to_top img {
+   width: 25px;
+}
+
+
+
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-cinquieme);
+}
+
+a:hover {
+   color: var(--color-second);
+}
+
+nav {
+   /* border: 1px dotted red; */
+   top: 0;
+   left: 0;
+   align-items: center;
+   display: flex;
+   justify-content: space-between;
+   padding: var(--padding-default);
+   background: var(--color-cinquieme);
+   position: sticky;
+   z-index: 2;
+}
+
+nav h1 {
+   color: white;
+}
+
+nav h1:hover {
+   /* border: 1px dotted red; */
+   color: var(--color-second);
+   cursor: crosshair;
+}
+
+nav a {
+   color: var(--color-second);
+   /* border: 1px solid red; */
+   justify-content: center;
+}
+
+nav a:hover {
+   /* border: 1px dotted red; */
+   border-bottom: 1px solid var(--color-quatrieme);
+   transition: var(--transition);
+}
+
+nav ul {
+   display: flex;
+   gap: 15px;
+   /* border: 1px dotted red; */
+   align-items: center;
+}
+
+nav ul li {
+   font-weight: 600;
+}
+
+.banner {
+   border: 1px dotted red;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.banner-png {
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.image-title {
+   position: absolute;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   padding: 50px;
+   width: 100%;
+}
+
+.login {
+   --primary-color: var(--color-troisieme);
+   --secondary-color: #fff;
+   --hover-color: #111;
+   --arrow-width: 10px;
+   --arrow-stroke: 2px;
+   box-sizing: border-box;
+   border: 0;
+   border-radius: 20px;
+   color: var(--secondary-color);
+   padding: 1em 1.8em;
+   background: var(--primary-color);
+   display: flex;
+   transition: 0.2s;
+   align-items: center;
+   gap: 0.6em;
+   font-weight: bold;
+}
+
+button .arrow-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+button .arrow {
+   margin-top: 1px;
+   width: var(--arrow-width);
+   background: var(--primary-color);
+   height: var(--arrow-stroke);
+   position: relative;
+   transition: 0.2s;
+}
+
+button .arrow:before {
+   content: "";
+   box-sizing: border-box;
+   position: absolute;
+   border: solid var(--secondary-color);
+   border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+   display: inline-block;
+   top: -3px;
+   right: 3px;
+   transition: 0.2s;
+   padding: 3px;
+   transform: rotate(-45deg);
+}
+
+button:hover {
+   background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+   background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+   right: 0;
+}

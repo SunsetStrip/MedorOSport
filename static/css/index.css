@@ -1,0 +1,78 @@
+:root {
+    --font-roboto: "Roboto", sans-serif;
+    --font-krabuler: "krabuler", sans-serif;
+    --font-comfortaa: "Comfortaa Bold", sans-serif;
+    --color-premier: #AD956B;
+    --color-second: #E1A624;
+    --color-troisieme: #317AC1;
+    --color-quatrieme: #384454;
+    --color-cinquieme: #1D3557;
+    --padding-default: 10px;
+    --box-shadow: 0 0 6px 5px grey;
+    --margin-top: 25px;
+    --margin: 10px;
+    --padding: 0px;
+    --border-radius: 10px;
+    --transition: 1.5s;
+    --background: ;
+}
+
+/* Règles pour tout le css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-roboto);
+}
+body{
+    background: url(https://www.woopets.fr/assets/img/000/012/1200x675/apprendre-chien-promener.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: left;
+}
+
+.header{
+    position: sticky;
+    width: 100%;
+    background-color: rgba(29, 53, 87, 0.7);
+}
+
+.header ul{
+    text-align: center;
+}
+
+.header li{
+    list-style: none;
+    display:inline-block;
+}
+
+.header ul li a{
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 15px;
+    font-family:var(--font-roboto);
+    letter-spacing: 2px;
+    font-weight: 100;
+    padding: 41.5px;
+    transition: all ease 0.5s;
+}
+.header ul li a:hover{
+    background-color: #317AC1;
+}
+
+.img2 {
+    height: 100px;
+    position: left;
+    position: absolute;
+}
+
+.log{
+    top: 0;
+}
+
+.sign{
+    top: 0;
+    left: 0;
+}

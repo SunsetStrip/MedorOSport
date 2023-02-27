@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="" UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,
+      initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('send_css', path='style.css') }}">
+  <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
+  <title>Réserver</title>
+
+</head>
+
+<header>
+  <h1>Médor au sport</h1>
+  <!-- #debut barre de bav  -->
+  <nav>
+    <ul>
+      <li><a href="index">Accueil</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="apropos">A propos</a></li>
+      <li><a href="reservation">Réservation</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="connexion">Connexion</a></li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+
+  <!-- Formulaire d'enregistrement du formulaire du chien -->
+  <form action="" method="get" class="formulaire-chien">
+    <legend>> Profil de votre chien</legend>
+
+    <!-- proprioChien -->
+    <div class="formulaire-chien">
+      <label for="Nom du propriétaire">Nom du propriétaire :</label>
+      <input type="text" name="proprioChien" id="proprioChien" required>
+
+      <!-- nomChien -->
+      <div class="formulaire-chien">
+        <label for="nom">Nom du chien : </label>
+        <input type="text" name="nomChien" id="nomChien" required>
+      </div>
+
+      <!-- raceChien -->
+      <div class="formulaire-chien">
+        <label for="race">Race du chien</label>
+        <input type="text" name="raceChien" id="raceChien" required>
+      </div>
+
+      <!-- ageChien -->
+      <div class="formulaire-chien">
+        <label for="age">Age du chien</label>
+        <input type="number" name="ageChien" id="ageChien" min=0 max=30 required>
+      </div>
+
+      <!-- poidsChien -->
+      <div class="formulaire-chien">
+        <fieldset>
+          <legend>Poids de votre chien :</legend>
+          <input type="radio" name="poidsChien1" id="poidsChien1">
+          <label for="poidsChien">Moins de 5kg</label></br>
+          <input type="radio" name="poidsChien2" id="poidsChien2">
+          <label for="poidsChien">Entre 5 et 10kg</label></br>
+          <input type="radio" name="poidsChien3" id="poidsChien3">
+          <label for="poidsChien">Plus de 10kg</label></br>
+        </fieldset>
+      </div>
+
+      <!-- sportChien : case à cocher (1 seule option possible)-->
+      <div class="formulaire-chien"></div>
+      <fieldset>
+        <legend>Quel besoin en sport ?</legend>
+        <input type="radio" name="sportChien1" id="sportChien1" value="Petit marcheur">
+        <label for="sportChien2">Petit marcheur</label></br>
+        <input type="radio" name="sportChien2" id="sportChien2">
+        <label for="sportChien">Promeneur</label></br>
+        <input type="radio" name="sportChien3" id="sportChien3">
+        <label for="sportChien">Energique</label></br>
+        <input type="radio" name="sportChien4" id="sportChien4">
+        <label for="sportChien">Inarrétable</label></br>
+      </fieldset>
+    </div>
+    </div>
+
+    <!-- Bouton pour envoyer vers la base de données -->
+    <div class="formulaire-chien">
+      <input type="submit" value="Enregistrer">
+    </div>
+
+    <!-- Bloc du calendrier -->
+    <div class="calendrier">
+
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+  <footer>
+    <p>Copyright Médor au sport</p>
+  </footer>
+
+  <!-- Bouton "Remonter en haut de la page / retour au menu") -->
+  <div id="scroll_to_top">
+    <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
+  </div>
+</body>
+
+
+
+</html>
