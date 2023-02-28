@@ -14,7 +14,8 @@
    <div class="header">
       <!-- Ensemble des élements pour la barre de navigation et bouton de connexion -->
       <nav>
-         <a href="index.html"><img src="{{ url_for('static', filename='img/logomas.png') }}" alt="logo"class="logomas" ></a>/>
+         <a href="index.html"><img src="{{ url_for('static', filename='img/logomas.png') }}" alt="logo"
+               class="logomas"></a>/>
          <ul>
             <li><a href="index">Accueil</a></li>
             <li><a href="services">Services</a></li>
@@ -38,15 +39,34 @@
    <!-- Section doghead-->
    <!-- Ensemble des élements pour les boutons "Profils des chiens" et "Reservation" -->
    <div class="doghead">
-      <a href="/apropos">
-         <img src="" alt="profiltetechien" loading="lazy" class="icon-profiltetechien">
-      </a>
-      <p>Remplir profil chien</p>
-      <a href="#">
-         <img src="#" alt="reservation" loading="lazy" class="reservation">
-      </a>
-      <p>Réservation</p>
+      
+      <div>
+         <a href="/apropos">
+            <img src="{{ url_for('static', filename='picto/compteparticulier.png') }}" alt="profiltetechien"
+               loading="lazy" class="reservation">
+         </a>
+         <button>
+            Mon chien
+            <div class="arrow-wrapper">
+               <div class="arrow"></div>
+            </div>
+         </button>
+      </div>
+      <div>
+         <a href="#">
+            <img src="{{ url_for('static', filename='picto/reservation.png') }}" alt="reservation" loading="lazy"
+               class="reservation">
+         </a>
+         <button>
+            Réservation
+            <div class="arrow-wrapper">
+               <div class="arrow"></div>
+
+            </div>
+         </button>
+      </div>
    </div>
+   <!-- fin de la section DOGHEAD-->
    <!-- Section avis-->
    <h2 class="avis-title">Nos avis clients !<h2>
          <div class="avis-rubrique">
@@ -79,23 +99,22 @@
             </div>
          </div>
          <!-- Section compteur-->
-         <div class="counter-container" id="counter-container">
-            <h3>Nombre de clients satisfaits : 653</h3>
-            <span id="customer-satisfaction-counter"></span>
+   <div class="compteur"> 
+         <div class="counter-un" id="counter-un">
+            <p class=" my-nb">>Nombre de clients satisfaits : 653</p>
+            <div class="image-container">
+               <img src="#" alt="Image 1">
+            </div>
          </div>
-         <div class="counter-container">
-            <h3>Nombre de courses réalisées : 2871</h3>
-            <span id="rides-counter"></span>
-         </div>
-         <div class="image-container">
-            <img src="#" alt="Image 1">
-         </div>
-         <div class="image-container">
+         <div class="counter-deux">
+            <p>Nombre de courses réalisées : 2871</p>
+            <div class="image-container">
             <img src="#" alt="Image 2">
-         </div>
+         </div>   
+   </div>
          <!-- fin des compteurs (4 blocs)-->
          <!-- Section story -->
-         <div class="histoire" id="histoire">
+         <div class="histoire">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at nisi eu nisi tempor tristique. Proin
                dictum ante ac leo aliquam, id tempor velit gravida.</p>
          </div>
