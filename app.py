@@ -100,9 +100,7 @@ def send_img(path):
 def formulaire_chien():
    return render_template("Testdesgars/formulaire_chien.html")
 
-# @app.route("/calendrier")
-# def calendrier():
-   # return render_template("Testdesgars/calendrier.html")
+
 
 app.run()
 
