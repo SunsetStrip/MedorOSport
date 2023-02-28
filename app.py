@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, abort, jsonify, url_for, send_from_directory
 from flask_bootstrap import Bootstrap
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 Bootstrap(app)
 
 @app.route("/")
@@ -88,11 +88,21 @@ def contact():
 def connexion():
    return render_template("connexion.html")
 
+# @app.route("/css/<path:path>")
+# def send_css(path):
+#    return send_from_directory("static/css", path)
+
+# @app.route("/img/<path:path>")
+# def send_img(path):
+#    return send_from_directory("static/img", path)
+
 @app.route("/formulaire_chien")
 def formulaire_chien():
    return render_template("Testdesgars/formulaire_chien.html")
 
-
+# @app.route("/calendrier")
+# def calendrier():
+   # return render_template("Testdesgars/calendrier.html")
 
 app.run()
 
