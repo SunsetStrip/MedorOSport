@@ -88,14 +88,6 @@ def contact():
 def connexion():
    return render_template("connexion.html")
 
-@app.route("/css/<path:path>")
-def send_css(path):
-   return send_from_directory("static/css", path)
-
-@app.route("/img/<path:path>")
-def send_img(path):
-   return send_from_directory("static/img", path)
-
 @app.route("/formulaire_chien")
 def formulaire_chien():
    return render_template("Testdesgars/formulaire_chien.html")
