@@ -17,14 +17,7 @@
     --background: ;
 }
 
-/* Responsive */
-@media screen and (max-width: 1400px) {
-    .header {
-        display: none;
-    }
-}
 
-/* Fin Responsive */
 /* Règles pour tout le css */
 * {
     margin: 0;
@@ -54,6 +47,7 @@ body {
 .header li {
     list-style: none;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .header ul li a {
@@ -75,8 +69,11 @@ body {
 
 .logomas {
     height: 100px;
-    position: left;
-    position: absolute;
+    display: block;
+}
+
+.lien-logomas {
+    padding: 0 !important;
 }
 
 .log {
@@ -88,21 +85,36 @@ body {
     left: 0;
 }
 
-.burger-menu {
-    color: var(--primary-color);
-    font-size: 20px;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
+#burger-menu {
     display: none;
 }
 
-.burger-menu:hover {
-    color: var(--secondary-color);
-    transition: var(--transition);
+/* Fin Nav Bar */
+
+/* Responsive */
+@media screen and (max-width: 1400px) {
+    #menu {
+        display: none;
+    }
+
+    .logomas {
+        display: none;
+    }
+
+    #burger-menu {
+        display: block;
+    }
+
+    #menu.visible {
+        display: block;
+    }
+
+    #menu.visible li {
+        display: block;
+    }
 }
 
-/* Fin Nav Bar */
+/* Fin Responsive */
 
 /* Début searchbar*/
 .searchbar {
@@ -147,10 +159,11 @@ body {
     border: 1px solid red;
     justify-content: space-evenly;
 }
+
 .reservation {
     width: 150px;
     height: 150px;
-    
+
 }
 
 button {

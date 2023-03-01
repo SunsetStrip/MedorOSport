@@ -8,29 +8,11 @@
    <title>Index</title>
    <!-- CSS Style -->
    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+   {% from "macros.html" import navigation, javascript %}
 </head>
 
 <body>
-   <div class="header">
-      <!-- Ensemble des élements pour la barre de navigation et bouton de connexion -->
-      <nav>
-         <a href="index.html"><img src="{{ url_for('static', filename='img/logomas.png') }}" alt="logo"
-               class="logomas"></a>/>
-         <ul>
-            <li><a href="index">Accueil</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href="apropos">A propos</a></li>
-            <li><a href="reservation">Réservation</a></li>
-            <li><a href="contact">Contact</a></li>
-            <li><a href="connexion">Connexion</a></li>
-            <li><button><span class="log"> login</span></button></li>
-            <li><button>
-                  <span class="sign"> Sign up
-                  </span>
-               </button></li>
-         </ul>
-      </nav>
-   </div>
+   {{ navigation() }}
    <!-- Section barre_recherche-->
    <!-- Ensemble des élements pour la barre de recherche -->
    <div class="searchbar">
@@ -39,7 +21,7 @@
    <!-- Section doghead-->
    <!-- Ensemble des élements pour les boutons "Profils des chiens" et "Reservation" -->
    <div class="doghead">
-      
+
       <div>
          <a href="/apropos">
             <img src="{{ url_for('static', filename='picto/compteparticulier.png') }}" alt="profiltetechien"
@@ -99,40 +81,43 @@
             </div>
          </div>
          <!-- Section compteur-->
-   <div class="compteur"> 
-         <div class="counter-un" id="counter-un">
-            <p class=" my-nb">>Nombre de clients satisfaits : 653</p>
-            <div class="image-container">
-               <img src="#" alt="Image 1">
+         <div class="compteur">
+            <div class="counter-un" id="counter-un">
+               <p class=" my-nb">>Nombre de clients satisfaits : 653</p>
+               <div class="image-container">
+                  <img src="#" alt="Image 1">
+               </div>
             </div>
-         </div>
-         <div class="counter-deux">
-            <p>Nombre de courses réalisées : 2871</p>
-            <div class="image-container">
-            <img src="#" alt="Image 2">
-         </div>   
-   </div>
-         <!-- fin des compteurs (4 blocs)-->
-         <!-- Section story -->
-         <div class="histoire">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at nisi eu nisi tempor tristique. Proin
-               dictum ante ac leo aliquam, id tempor velit gravida.</p>
-         </div>
-         <div class="block" id="block">
-            <img src="#" alt="Image">
-         </div>
-         <!-- Section footer-->
-         <footer>
-            <p>Dernières annonces | ines@happudog.fr | Mentions légales | Conditions générales | Vie privée |</p>
-            <div class="footer-avis">
-               <p>4.4 /5 (3653 avis)</p>
+            <div class="counter-deux">
+               <p>Nombre de courses réalisées : 2871</p>
+               <div class="image-container">
+                  <img src="#" alt="Image 2">
+               </div>
             </div>
-            <div class="footer-networks">
-               <p>suivez-nous Instagram / Facebook</p>
+            <!-- fin des compteurs (4 blocs)-->
+            <!-- Section story -->
+            <div class="histoire">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at nisi eu nisi tempor tristique.
+                  Proin
+                  dictum ante ac leo aliquam, id tempor velit gravida.</p>
             </div>
-            <div class="Copyright"></div>
-            <p>MEDORAUSPORT 2021-2026. TOUS DROITS RÉSERVÉS&copy; 2023</p>
-         </footer>
+            <div class="block" id="block">
+               <img src="#" alt="Image">
+            </div>
+            <!-- Section footer-->
+            <footer>
+               <p>Dernières annonces | ines@happudog.fr | Mentions légales | Conditions générales | Vie privée |</p>
+               <div class="footer-avis">
+                  <p>4.4 /5 (3653 avis)</p>
+               </div>
+               <div class="footer-networks">
+                  <p>suivez-nous Instagram / Facebook</p>
+               </div>
+               <div class="Copyright"></div>
+               <p>MEDORAUSPORT 2021-2026. TOUS DROITS RÉSERVÉS&copy; 2023</p>
+            </footer>
+
+{{ javascript() }}
 </body>
 
 </html>

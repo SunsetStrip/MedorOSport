@@ -1,0 +1,29 @@
+{% macro navigation() %}
+<div class="header">
+    <!-- Ensemble des élements pour la barre de navigation et bouton de connexion -->
+    <nav>
+        <img src="{{ url_for('static', filename='picto/burger-menu.png') }}" alt="menu" id="burger-menu"
+            class="burger-menu">
+        <ul id="menu">
+            <li><a class="lien-logomas" href="index"><img src="{{ url_for('static', filename='img/logomas.png') }}"
+                        alt="logo" class="logomas"></a></li>
+            <li><a href="index">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="apropos">A propos</a></li>
+            <li><a href="reservation">Réservation</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="connexion">Connexion</a></li>
+            <li><button><span class="log"> login</span></button></li>
+            <li><button>
+                    <span class="sign"> Sign up
+                    </span>
+                </button></li>
+        </ul>
+    </nav>
+</div>
+
+{% endmacro %}
+
+{% macro javascript() %}
+<script type="text/javascript" src="static\JS\script.js"></script>
+{% endmacro %}
