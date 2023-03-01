@@ -9,22 +9,17 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
   <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
   <title>Réserver</title>
+  <!-- Import Javascript -->
+  {% from "macros.html" import navigation, Footer, javascript %}
+
 
 </head>
 
 <header>
   <h1>Médor au sport</h1>
-  <!-- #debut barre de bav  -->
-  <nav>
-    <ul>
-      <li><a href="index">Accueil</a></li>
-      <li><a href="services">Services</a></li>
-      <li><a href="apropos">A propos</a></li>
-      <li><a href="reservation">Réservation</a></li>
-      <li><a href="contact">Contact</a></li>
-      <li><a href="connexion">Connexion</a></li>
-    </ul>
-  </nav>
+  <!-- Début Nav Bar -->
+  {{ navigation() }}
+  <!-- Fin nav bar -->
 </header>
 
 <body>
@@ -111,7 +106,14 @@
   <div id="scroll_to_top">
     <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
   </div>
+
+  <!-- Script -->
+  {{ javascript() }}
+  <!-- Fin script -->
 </body>
+<!-- Section footer-->
+{{ Footer() }}
+<!-- Fin Footer -->
 
 
 

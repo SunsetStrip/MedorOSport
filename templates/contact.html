@@ -12,27 +12,22 @@
    <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
    <!--FAVICON-->
 
+   <!-- Import Javascript -->
+   {% from "macros.html" import navigation, Footer, javascript %}
+
 </head>
 
 <body>
-   <!--NAVBAR-->
-   <nav>
-      <ul class="navigation">
-         <li><a href="index" class="">Accueil</a></li>
-         <li><a href="services" class="">Services</a></li>
-         <li><a href="apropos" class="">A propos</a></li>
-         <li><a href="reservation" class="">Reservation</a></li>
-         <li><a href="contact" class="">Contact</a></li>
-         <li><a href="connexion" class="">Connexion</a></li>
-      </ul>
-   </nav>
+   <!-- Début Nav Bar -->
+   {{ navigation() }}
+   <!-- Fin nav bar -->
 
    <section class="contact-info">
-      <p>Vous pouvez nous contacter à l'aide du formulaire ci-dessous. 
+      <p>Vous pouvez nous contacter à l'aide du formulaire ci-dessous.
          Une section questions-réponses F.A.Q. est également disponible en bas de page sous le formulaire.
          N'hésitez pas à la consulter avant de nous contacter ;)</p>
    </section>
-<!-- FORMULAIRE -->
+   <!-- FORMULAIRE -->
    <fieldset>
       <legend>Nous contacter : (les champs suivis de * sont obligatoires)</legend>
       <form action="" method="post">
@@ -64,47 +59,68 @@
    </fieldset>
 
 
-<!-- F.A.Q. -->
-<section class="FAQ">
-   <h2>F.A.Q.</h2>
-   <div class="question">
-      <h3>Qu’est-ce que Médor au sport ?</h3>
-      <p>“Médor au sport” est un site web mettant en relation les propriétaires de chiens souhaitant contrer l’ennui de leur chien durant leur journée d’absence et leur faire faire du sport avec l’aide d’un éducateur canin.
-      </p>
-   </div>
-   <div class="question">
-      <h3>Comment réserver ?</h3>
-      <p>Vous pouvez réserver dans l’onglet réservation. Pouvez choisir votre éducateur en fonction de la géolocalisation, des avis ou de son badge.</p>
-   </div>
-   <div class="question">
-      <h3>Je n’ai pas accès à la géolocalisation. Comment faire ?</h3>
-      <p>Réponse</p>
-   </div>
-   <div class="question">
-      <h3>Je n’ai pas accès à la géolocalisation. Comment faire ?
+   <!-- F.A.Q. -->
+   <section class="FAQ">
+      <h2>F.A.Q.</h2>
+      <div class="question">
+         <h3>Qu’est-ce que Médor au sport ?</h3>
+         <p>“Médor au sport” est un site web mettant en relation les propriétaires de chiens souhaitant contrer l’ennui
+            de leur chien durant leur journée d’absence et leur faire faire du sport avec l’aide d’un éducateur canin.
+         </p>
+      </div>
+      <div class="question">
+         <h3>Comment réserver ?</h3>
+         <p>Vous pouvez réserver dans l’onglet réservation. Pouvez choisir votre éducateur en fonction de la
+            géolocalisation, des avis ou de son badge.</p>
+      </div>
+      <div class="question">
+         <h3>Je n’ai pas accès à la géolocalisation. Comment faire ?</h3>
+         <p>Réponse</p>
+      </div>
+      <div class="question">
+         <h3>Je n’ai pas accès à la géolocalisation. Comment faire ?
          </h3>
-      <p>Si vous n'avez pas accès à la géolocalisation sur un site web, il y a plusieurs raisons qui peuvent en être la cause et différentes solutions à essayer :</p>
-      <p>Paramètres du navigateur : Vérifiez les paramètres de votre navigateur pour vous assurer que la géolocalisation est activée.</p>
-      <p>Blocage du navigateur : Certaines extensions de navigateur peuvent bloquer la géolocalisation pour des raisons de sécurité. Désactivez temporairement ces extensions et vérifiez si cela résout le problème.</p>
-      <p>Autorisations : Certains sites web peuvent nécessiter que vous autorisiez explicitement l'accès à votre emplacement. Vérifiez les paramètres de permission pour vous assurer que vous avez autorisé le site web en question à accéder à votre emplacement.</p>
-      <p>Connexion internet : Assurez-vous d'avoir une connexion Internet stable pour permettre la géolocalisation.</p>
-      <p>Pare-feu : Les pare-feux peuvent parfois bloquer l'accès à la géolocalisation. Vérifiez les paramètres de votre pare-feu pour vous assurer qu'il n'empêche pas la géolocalisation.</p>
-      <p>Si aucune de ces solutions ne fonctionne, il peut être nécessaire de contacter le support technique du site web en question pour obtenir de l'aide supplémentaire.</p>
-   </div>
-   <div class="question">
-      <h3>On a volé mon chien !!</h3>
-      <p>Si vous soupçonnez qu'un éducateur canin a volé votre chien, il est important d'agir rapidement pour retrouver votre animal. Voici les étapes que vous pouvez suivre :</p>
-      <p>Appelez les autorités : Contactez les autorités locales, telles que la police ou le bureau du shérif, pour déclarer le vol de votre chien. Fournissez autant de détails que possible, y compris les informations sur l'éducateur canin suspecté et les circonstances entourant la disparition de votre chien.</p>
-      <p>Étendez votre recherche : Parlez à des voisins, des amis et des membres de votre communauté pour voir s'ils ont des informations sur l'emplacement de votre chien. Envisagez de distribuer des avis de recherche dans votre région.</p>
-      <p>Utilisez les réseaux sociaux : Postez sur les réseaux sociaux, tels que Facebook et Twitter, pour informer les gens de la disparition de votre chien et demander leur aide pour le retrouver.</p>
-      <p>Contactez les refuges pour animaux locaux : Appelez les refuges pour animaux locaux et les organisations de protection des animaux pour voir s'ils ont récupéré ou vu votre chien.</p>
-      <p>Il est important de travailler rapidement et de ne pas abandonner les recherches jusqu'à ce que vous ayez retrouvé votre chien. Envisagez également de consulter un avocat pour savoir comment poursuivre juridiquement l'éducateur canin suspecté.</p>
-   </div>
-   <div class="question">
-      <h3>A partir de quel âge puis-je inscrire mon chien à une activité ?</h3>
-      <p>Dès l’arrivée de votre chiot dans son nouveau foyer. Son développement et la construction de votre relation doit se faire rapidement sur de bonnes bases.</p>
-      <p>N’hésitez pas à consulter votre vétérinaire ou nos éducateurs spécialisés pour trouver l’activité qui conviendra le mieux à votre chien.</p>
-   </div>
+         <p>Si vous n'avez pas accès à la géolocalisation sur un site web, il y a plusieurs raisons qui peuvent en être
+            la cause et différentes solutions à essayer :</p>
+         <p>Paramètres du navigateur : Vérifiez les paramètres de votre navigateur pour vous assurer que la
+            géolocalisation est activée.</p>
+         <p>Blocage du navigateur : Certaines extensions de navigateur peuvent bloquer la géolocalisation pour des
+            raisons de sécurité. Désactivez temporairement ces extensions et vérifiez si cela résout le problème.</p>
+         <p>Autorisations : Certains sites web peuvent nécessiter que vous autorisiez explicitement l'accès à votre
+            emplacement. Vérifiez les paramètres de permission pour vous assurer que vous avez autorisé le site web en
+            question à accéder à votre emplacement.</p>
+         <p>Connexion internet : Assurez-vous d'avoir une connexion Internet stable pour permettre la géolocalisation.
+         </p>
+         <p>Pare-feu : Les pare-feux peuvent parfois bloquer l'accès à la géolocalisation. Vérifiez les paramètres de
+            votre pare-feu pour vous assurer qu'il n'empêche pas la géolocalisation.</p>
+         <p>Si aucune de ces solutions ne fonctionne, il peut être nécessaire de contacter le support technique du site
+            web en question pour obtenir de l'aide supplémentaire.</p>
+      </div>
+      <div class="question">
+         <h3>On a volé mon chien !!</h3>
+         <p>Si vous soupçonnez qu'un éducateur canin a volé votre chien, il est important d'agir rapidement pour
+            retrouver votre animal. Voici les étapes que vous pouvez suivre :</p>
+         <p>Appelez les autorités : Contactez les autorités locales, telles que la police ou le bureau du shérif, pour
+            déclarer le vol de votre chien. Fournissez autant de détails que possible, y compris les informations sur
+            l'éducateur canin suspecté et les circonstances entourant la disparition de votre chien.</p>
+         <p>Étendez votre recherche : Parlez à des voisins, des amis et des membres de votre communauté pour voir s'ils
+            ont des informations sur l'emplacement de votre chien. Envisagez de distribuer des avis de recherche dans
+            votre région.</p>
+         <p>Utilisez les réseaux sociaux : Postez sur les réseaux sociaux, tels que Facebook et Twitter, pour informer
+            les gens de la disparition de votre chien et demander leur aide pour le retrouver.</p>
+         <p>Contactez les refuges pour animaux locaux : Appelez les refuges pour animaux locaux et les organisations de
+            protection des animaux pour voir s'ils ont récupéré ou vu votre chien.</p>
+         <p>Il est important de travailler rapidement et de ne pas abandonner les recherches jusqu'à ce que vous ayez
+            retrouvé votre chien. Envisagez également de consulter un avocat pour savoir comment poursuivre
+            juridiquement l'éducateur canin suspecté.</p>
+      </div>
+      <div class="question">
+         <h3>A partir de quel âge puis-je inscrire mon chien à une activité ?</h3>
+         <p>Dès l’arrivée de votre chiot dans son nouveau foyer. Son développement et la construction de votre relation
+            doit se faire rapidement sur de bonnes bases.</p>
+         <p>N’hésitez pas à consulter votre vétérinaire ou nos éducateurs spécialisés pour trouver l’activité qui
+            conviendra le mieux à votre chien.</p>
+      </div>
    </section>
 
 
@@ -112,9 +128,13 @@
    <div id="scroll_to_top">
       <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
    </div>
+
+   <!-- Script -->
+   {{ javascript() }}
+   <!-- Fin script -->
 </body>
-<footer>
-   <p>Pied de page</p>
-</footer>
+<!-- Section footer-->
+{{ Footer() }}
+<!-- Fin Footer -->
 
 </html>

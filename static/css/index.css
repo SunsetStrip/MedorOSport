@@ -14,7 +14,6 @@
     --padding: 0px;
     --border-radius: 10px;
     --transition: 1.5s;
-    --background: ;
 }
 
 
@@ -27,17 +26,17 @@
 }
 
 /* Début Nav Bar */
-body {
+body#index {
     background: url("../img/course.png") no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 10vh;
     background-position: left;
 }
 
 .header {
     position: sticky;
     width: 100%;
-    background-color: rgba(61, 33, 182, 0.705);
+    background-color: rgba(12, 1, 59, 0.705);
 }
 
 .header ul {
@@ -89,10 +88,23 @@ body {
     display: none;
 }
 
+#H2 {
+    background-color: var(--color-premier);
+    padding: var(--padding-default);
+    color: black;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin: var(--margin);
+    text-align: center;
+    margin-bottom: var(--margin-top);
+    line-height: 15px;
+}
+
+
 /* Fin Nav Bar */
 
 /* Responsive */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 900px) {
     #menu {
         display: none;
     }
@@ -129,7 +141,7 @@ body {
     margin-bottom: 6px;
     padding-left: 5px;
     max-width: 60%;
-    background-color: var(--color-second);
+    background-color: rgba(174, 165, 40, 0.756);
     opacity: 0.8;
     color: #242424;
     min-height: 40px;
@@ -156,8 +168,8 @@ body {
 .doghead {
     align-items: center;
     display: flex;
-    border: 1px solid red;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .reservation {
@@ -226,10 +238,31 @@ button:hover .arrow:before {
     right: 0;
 }
 
+/* fin DOGHEAD */
+/* Début section Compteur */
+
+.compteur {
+    display: flex;
+    justify-content: center;
+    
+}
+.toutou {
+    width: 250px;
+    height: 250px;
+
+}
+
+
+
 
 /* Début Footer */
 footer {
     background-color: rgb(4, 4, 87);
     color: white;
     text-align: center;
+    margin-bottom: 0;
+    display: block;
 }
+
+/* Fin Footer */
+

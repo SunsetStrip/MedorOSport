@@ -2,24 +2,19 @@
 <html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/apropos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
     <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
     <title>A propos</title>
+    <!-- Import Javascript -->
+    {% from "macros.html" import navigation, Footer, javascript %}
+
 </head>
 
 <header>
-    <h1>Médor au sport</h1>
-    <!-- #debut barre de bav  -->
-    <nav>
-        <ul>
-            <li><a href="index">Accueil</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href="apropos">A propos</a></li>
-            <li><a href="reservation">Réservation</a></li>
-            <li><a href="contact">Contact</a></li>
-            <li><a href="connexion">Connexion</a></li>
-        </ul>
-    </nav>
+    <!-- Début Nav Bar -->
+    {{ navigation() }}
+    <!-- Fin nav bar -->
+
 </header>
 
 <body>
@@ -50,9 +45,10 @@
                 son compagnon de vie, nos certifications sont pensées pour vous permettre de vous consacrer à votre
                 quotidien en toute tranquillité pendant que votre toutou se dépense sans compter.
             </p>
-                </br>
+            </br>
             <p>
-                Chapitre 2 "Medor Au Sport" est né de l'envie d'une jeune lyonnaise souhaitant permettre à son chien de bénéficier
+                Chapitre 2 "Medor Au Sport" est né de l'envie d'une jeune lyonnaise souhaitant permettre à son chien de
+                bénéficier
                 de plus de temps à courrir & à se dépenser malgré son emploi du temps chargé.
                 S'entourant d'une équipe de bras cass... professionnels dévoués (et fortement rémunérés), le projet fut
                 lancé.
@@ -122,8 +118,13 @@
         <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
     </div>
 
+    <!-- Script -->
+    {{ javascript() }}
+    <!-- Fin script -->
 </body>
-<!-- javascript -->
+<!-- Section footer-->
+{{ Footer() }}
+<!-- Fin Footer -->
 
 </html>
 

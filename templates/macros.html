@@ -12,16 +12,25 @@
             <li><a href="apropos">A propos</a></li>
             <li><a href="reservation">Réservation</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><a href="connexion">Connexion</a></li>
-            <li><button><span class="log"> login</span></button></li>
-            <li><button>
-                    <span class="sign"> Sign up
-                    </span>
-                </button></li>
+            <li><button><span class="log"> Connexion</span></button></li>
         </ul>
     </nav>
 </div>
 
+{% endmacro %}
+
+{% macro Footer() %}
+<footer>
+    <p>Contact@medorausport.fr | Mentions légales | Conditions générales |</p>
+    <div class="footer-number">
+        <p>06 62 41 96 21</p>
+    </div>
+    <div class="footer-networks">
+        <p>Instagram / Facebook</p>
+    </div>
+    <div class="Copyright"></div>
+    <p>&copy;MEDORAUSPORT 2021-2026. TOUS DROITS RÉSERVÉS</p>
+</footer>
 {% endmacro %}
 
 {% macro javascript() %}
