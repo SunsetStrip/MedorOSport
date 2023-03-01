@@ -249,11 +249,21 @@ button:hover .arrow:before {
 .toutou {
     width: 250px;
     height: 250px;
+    border-radius: 20px;
+    
 
 }
 
 
-
+/* story*/
+.histoire{
+    display: flex;
+}
+.bigflo {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
 
 /* Début Footer */
 footer {
