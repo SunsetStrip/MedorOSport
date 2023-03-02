@@ -5,14 +5,13 @@
         <img src="{{ url_for('static', filename='picto/burger-menu.png') }}" alt="menu" id="burger-menu"
             class="burger-menu">
         <ul id="menu">
-            <li><a class="lien-logomas" href="index"><img src="{{ url_for('static', filename='img/logomas.png') }}"
-                        alt="logo" class="logomas"></a></li>
+            <li><a class="lien-logomas" href="index"><img src="{{ url_for('static', filename='img/logomas.png') }}" alt="logo" class="logomas"></a></li>
             <li><a href="index">Accueil</a></li>
             <li><a href="services">Services</a></li>
             <li><a href="apropos">A propos</a></li>
             <li><a href="reservation">Réservation</a></li>
             <li><a href="contact">Contact</a></li>
-            <li><button><span class="log"> Connexion</span></button></li>
+            <a class="log" href="connexion">Connexion</a>
         </ul>
     </nav>
 </div>

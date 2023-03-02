@@ -10,15 +10,13 @@
    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
    <!-- Import Javascript -->
    {% from "macros.html" import navigation, Footer, javascript %}
+
 </head>
 
 <body id="index">
    {{ navigation() }}
-   <div id="H2">
-      <H2>
-         Sport et bien-être pour votre chien !
-      </H2>
-   </div>
+   <img src="{{ url_for('static', filename='img/course.png') }}" loading="lazy" class="course">
+   <h1 class="title-principal">Sport et bien-être pour votre chien !</h1>
    <!-- Section barre_recherche-->
    <!-- Ensemble des élements pour la barre de recherche -->
    <div class="searchbar">
@@ -48,70 +46,72 @@
             Réservation
             <div class="arrow-wrapper">
                <div class="arrow"></div>
-
             </div>
          </button>
       </div>
    </div>
    <!-- fin de la section DOGHEAD-->
    <!-- Section avis-->
-   <h2 class="avis-title">Nos avis clients !</h2>
+   <h2 class="avis-title">Nos clients partagent leur expérience à nos côtés !</h2>
    <div class="avis-rubrique">
-      <div class="avis-note">
-         <img src="" alt="" loading="lazy" class="avis-pics">
-         <img src="" alt="" loading="lazy" class="avis-stars">
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapien beatae
-            delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid facilis
-            doloribus accusantium incidunt quaerat voluptate?</p>
+      <div class="card" style="--rating:90">
+         <img class="client" src="{{ url_for('static', filename='img/samantha.png') }}">
+         <div class="title">Samantha B.</div>
+         <p class="description">Eric a promené Max 2 durant un mois et tout s'est très bien passé.</p>
+         <div class="rating"></div>
       </div>
-      <div class="avis-note">
-         <img src="" alt="" loading="lazy" class="avis-pics">
-         <img src="" alt="" loading="lazy" class="avis-stars">
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente beatae
-            delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid facilis
-            doloribus accusantium incidunt quaerat voluptate?></p>
+      <div class="card" style="--rating:90">
+         <img class="client" src="{{ url_for('static', filename='img/barnabe.png') }}">
+         <div class="title">Barnabé F.</div>
+         <p class="description">Le processus de recherche sur ce site web était simple et rapide, et je suis ravi
+            d'avoir trouvé un éducateur canin exceptionnel grâce à lui.</p>
+         <div class="rating"></div>
       </div>
-      <div class="avis-note">
-         <img src="" alt="" loading="lazy" class="avis-pics"><img src="" alt="" loading="lazy" class="avis-stars">
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente beatae
-            delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid facilis
-            doloribus accusantium incidunt quaerat voluptate?</p>
+      <div class="card" style="--rating:90">
+         <img class="client" src="{{ url_for('static', filename='img/natacha.png') }}">
+         <div class="title">Natacha L.</div>
+         <p class="description">L'expérience d'utilisation de ce site web pour trouver un maître canin a été
+            incroyablement fluide et agréable, et les maîtres canins</p>
+         <div class="rating"></div>
       </div>
-      <div class="avis-note">
-         <img src="" alt="" loading="lazy" class="avis-pics">
-         <img src="" alt="" loading="lazy" class="avis-stars">
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, velit. Dolores sapiente beatae
-            delectus reiciendis pariatur eveniet quasi blanditiis voluptate? Odit non eveniet aliquid facilis
-            doloribus accusantium incidunt quaerat voluptate?</p>
+      <div class="card" style="--rating:90">
+         <img class="client" src="{{ url_for('static', filename='img/clement.png') }}">
+         <div class="title">Clément J.</div>
+         <p class="description">Parfait ! Je recommande à 100%.</p>
+         <div class="rating"></div>
       </div>
    </div>
    <!-- Section compteur-->
    <div class="compteur">
       <div class="counter-un" id="counter-un">
-         <p>Nombre de clients satisfaits : 653</p>
          <div class="image-container">
             <img src="{{ url_for('static', filename='img/proprietairesatisfait.png') }}" alt="Image 1" class="toutou">
+            <p>Nombre de clients satisfaits : <span class="chiffre">653</span></p>
          </div>
       </div>
       <div class="counter-deux">
-         <p>Nombre de courses réalisées : 2871</p>
          <div class="image-container">
             <img src="{{ url_for('static', filename='img/chienpromene.png') }}" alt="Image 2" class="toutou">
+            <p>Nombre de courses réalisées : <span class="chiffre"> 2871</p>
          </div>
       </div>
-      <!-- fin des compteurs (4 blocs)-->
-      <!-- Section story -->
-      <div class="histoire">
-         <p>Des passionnés d’animaux et en particulier des chiens! 
+   </div>
+   <!-- fin des compteurs (4 blocs)-->
+   <!-- Section story -->
+   <h2>Qui sommes-nous ?</h2>
+   <div class="histoire">
+      <p>Des passionnés d’animaux et en particulier des chiens!
 
-            Lors de nos échanges avec notre entourage, nous avons remarqué que beaucoup de propriétaires de chiens souhaitent que leur compagnon soit plus actif et en meilleure forme physique. C'est alors que nous avons eu cette idée : créer un site web pour mettre en relation les propriétaires de chiens avec des éducateurs canins expérimentés pratiquant le cani cross, le bike joering, trotticaning, ski joering…
-            
-            …ainsi “Médor au sport”, vous permet de trouver facilement un éducateur adepte du bien-être de votre animal à travers le sport. Que vous soyez propriétaires de chiens ou éducateur canin, partagez votre passion pour le chien en alliant sport et bien-être canin.
-            </p>
-      </div>
-      <div class="block" id="block">
-         <img src="{{ url_for('static', filename='img/story.png') }}" alt="Image" class="bigflo">
-      </div>
+         Lors de nos échanges avec notre entourage, nous avons remarqué que beaucoup de propriétaires de chiens
+         souhaitent que leur compagnon soit plus actif et en meilleure forme physique. C'est alors que nous avons eu
+         cette idée : créer un site web pour mettre en relation les propriétaires de chiens avec des éducateurs
+         canins expérimentés pratiquant le cani cross, le bike joering, trotticaning, ski joering…
+
+         …ainsi “Médor au sport”, vous permet de trouver facilement un éducateur adepte du bien-être de votre animal
+         à travers le sport. Que vous soyez propriétaires de chiens ou éducateur canin, partagez votre passion pour
+         le chien en alliant sport et bien-être canin.
+      </p>
+      <img src="{{ url_for('static', filename='img/story.png') }}" alt="Image" class="bigflo">
    </div>
    <!-- Section footer-->
    {{ Footer() }}
@@ -121,5 +121,4 @@
    {{ javascript() }}
    <!-- Fin script -->
 </body>
-
 </html>

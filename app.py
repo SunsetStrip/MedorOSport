@@ -104,7 +104,7 @@ def formulaire_chien():
 # def calendrier():
    # return render_template("Testdesgars/calendrier.html")
 
-app.run()
+app.run(debug=True)
 
 
 

@@ -6,24 +6,18 @@
   <meta http-equiv="X-UA-compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,
       initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/connexion.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
   <title>Connexion</title>
+  <!-- Import Javascript -->
+  {% from "macros.html" import navigation, Footer, javascript %}
 
 </head>
 
 <body>
   <form action="action_page.php" method="post">
-    <!--NAVBAR-->
-    <nav>
-      <ul class="navigation">
-        <li><a href="index" class="">Accueil</a></li>
-        <li><a href="services" class="">Services</a></li>
-        <li><a href="apropos" class="">A propos</a></li>
-        <li><a href="reservation" class="">Reservation</a></li>
-        <li><a href="contact" class="">Contact</a></li>
-        <li><a href="connexion" class="">Connexion</a></li>
-      </ul>
-    </nav>
+    <!-- Début Nav Bar -->
+    {{ navigation() }}
+    <!-- Fin nav bar -->
 
     <div class="questionnaire">
       <h3>Espace professionnel</h3>
@@ -54,5 +48,10 @@
       </label>
     </div>
 
-
+    <!-- Script -->
+    {{ javascript() }}
+    <!-- Fin script -->
 </body>
+<!-- Section footer-->
+{{ Footer() }}
+<!-- Fin Footer -->
