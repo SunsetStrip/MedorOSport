@@ -19,6 +19,7 @@
    <h1 class="title-principal">Sport et bien-être pour votre chien !</h1>
    <!-- Section barre_recherche-->
    <!-- Ensemble des élements pour la barre de recherche -->
+   <h2 class="searchbar-title">Votre chien mérite le meilleur</h2>
    <div class="searchbar">
       <input class="barre" name="text" placeholder="Search..." type="search">
    </div>
@@ -82,20 +83,20 @@
       </div>
    </div>
    <!-- Section compteur-->
-   <div class="compteur">
-      <div class="counter-un" id="counter-un">
-         <div class="image-container">
-            <img src="{{ url_for('static', filename='img/proprietairesatisfait.png') }}" alt="Image 1" class="toutou">
-            <p>Nombre de clients satisfaits : <span class="chiffre">653</span></p>
+   <section class="sectionNumbers">
+      <div class="sectionNumbers__item" id="sectionNumbers__item">
+         <img src="{{ url_for('static', filename='img/chienpromene.png') }}" alt="Image 2" class="toutou">
+         <div class="sectionNumbers__number number1">
          </div>
+         <p>Nombre de courses réalisées : </p>
       </div>
-      <div class="counter-deux">
-         <div class="image-container">
-            <img src="{{ url_for('static', filename='img/chienpromene.png') }}" alt="Image 2" class="toutou">
-            <p>Nombre de courses réalisées : <span class="chiffre"> 2871</p>
+      <div class="sectionNumbers__item">
+         <img src="{{ url_for('static', filename='img/proprietairesatisfait.png') }}" alt="Image 1" class="toutou">
+         <div class="sectionNumbers__number number2">
          </div>
+         <p>Nombre de propriétaires satisfaits : </p>
       </div>
-   </div>
+   </section>
    <!-- fin des compteurs (4 blocs)-->
    <!-- Section story -->
    <h2>Qui sommes-nous ?</h2>
@@ -121,4 +122,5 @@
    {{ javascript() }}
    <!-- Fin script -->
 </body>
+
 </html>

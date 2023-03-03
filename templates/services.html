@@ -18,23 +18,16 @@
 
 <body>
 
-  <h1> Nos Services <h1>
-      <!--NAVBAR-->
-      {{ navigation() }}
-      <!-- Image page -->
-      <section class="banner" id="banner">
-        <img src="../static/img/liberte.png" alt="banner" loading="lazy" class="banner-png" />
-        <div class="image-title">Sport et bien-être pour votre chien</div>
-        </div>
-        <form action="recherche.php" method="get">
-      </section>
-      <!-- CTA Reservation-->
-      <button type="submit" href="reservation">Réservation</button><br>
+  <!--NAVBAR-->
+  {{ navigation() }}
+  <!-- Image page -->
+  <section class="service">
+    <div class="service-title">Canicross</div>
+    </div>
+    <form action="recherche.php" method="get">
       <!-- Activite-->
-      <h2>Course</h2>
+      <h2 class="service-title2">Canicross</h2>
       <div class="Course">
-        <h3>Course</h3>
-
         <p>Le canicross est une course à pied avec un chien en laisse. Cette activité améliore le bien-être du chien
           grâce à l'exercice physique et à la collaboration avec son propriétaire ou l’éducateur canin. Les courses de
           canicross sont adaptées à tous les niveaux de condition physique et peuvent se dérouler sur des terrains
@@ -44,9 +37,9 @@
         <button type="submit" href="reservation">CTA</button>
       </div>
 
-      <h2>Dogsitting</h2>
+      <h2 class="service-title">Dogsitting</h2>
       <div class="Dogsitting">
-        <h3>Dogsitting</h3>
+        <h3 class="service-title2">Dogsitting</h3>
 
         <p>Besoin d'un mode de garde pour votre animal de compagnie pendant votre absence? Le dogsitting est la solution
           idéale. Avec le dogsitting, un gardien expérimenté prend soin de votre chien en votre absence, en s'occupant
@@ -57,9 +50,9 @@
         <button type="submit" href="reservation">CTA</button>
       </div>
 
-      <h2>Trotticani</h2>
+      <h2 class="service-title">Trotticani</h2>
       <div class="Trotticani">
-        <h3>Trotticani</h3>
+        <h3 class="service-title2">Trotticani</h3>
 
         <p>découvrez l'activité sportive originale pour vous et votre animal de compagnie ! Cette activité consiste à se
           déplacer sur une trottinette tout en faisant courir votre chien à côté de vous, en utilisant une laisse
@@ -71,9 +64,9 @@
         <button type="submit" href="reservation">CTA</button>
       </div>
 
-      <h2>VTT</h2>
+      <h2 class="service-title">VTT</h2>
       <div class="VTT">
-        <h3>VTT</h3>
+        <h3 class="service-title2">VTT</h3>
 
         <p>VTT avec son chien : l'expérience de montagne unique pour vous et votre animal de compagnie ! Partez à
           l'aventure sur les sentiers de montagne avec votre chien grâce à cette activité sportive passionnante. Le VTT
@@ -85,9 +78,9 @@
         <button type="submit" href="reservation">CTA</button>
       </div>
 
-      <h2>Ski joering</h2>
+      <h2 class="service-title">Ski joering</h2>
       <div class="Skijoering">
-        <h3>Ski joering</h3>
+        <h3 class="service-title2">Ski joering</h3>
 
         <p>Le ski joering est une activité sportive consistant à faire du ski tout en tirant des chiens attachés à une
           longe.Toutes les races de chiens peuvent participer à cette activité hivernale, à condition d'avoir une bonne
@@ -98,8 +91,10 @@
         <button type="submit" href="reservation">CTA</button>
       </div>
 
+      <h2 class="service-title">Dressageg</h2>
       <div class="dressage">
         <!-- Dressage -->
+        <h3 class="service-title2">Dressage</h3>
         <img src="../static/img/dressage.png" alt="dressage" href="">
         <p>Le dressage de chien est un processus éducatif pour enseigner des comportements spécifiques à votre animal de
           compagnie. C’est une étape importante pour renforcer votre lien avec votre chien et améliorer son comportement
@@ -123,9 +118,11 @@
       <div id="scroll_to_top">
         <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
       </div>
-      <!-- Script  -->
-      {{ javascript() }}
-      <!-- Fin script -->
+  </section>
+
+  <!-- Script  -->
+  {{ javascript() }}
+  <!-- Fin script -->
 </body>
 <!-- Section footer-->
 {{ Footer() }}

@@ -104,12 +104,14 @@
 
 .log {
     display: inline-block;
-    background-color:var(--color-premier);
+    background-color: var(--color-premier);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    font-size: initial;
+    font-weight: 100;
 }
 
 .sign {
@@ -135,6 +137,15 @@
     margin-right: auto;
 }
 
+.searchbar-title {
+    text-align: left;
+    padding: 25px;
+    margin: 35px;
+    text-decoration: underline var(--color-troisieme);
+}
+
+
+
 /* h1:hover {
     color: var(--color-second);
     box-shadow: var(--box-shadow);
@@ -153,7 +164,7 @@ h2 {
 /* Fin Nav Bar */
 
 /* Responsive */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     #menu {
         display: none;
     }
@@ -226,6 +237,7 @@ h2 {
 .reservation {
     width: 150px;
     height: 150px;
+    margin-bottom: 20px;
 
 }
 
@@ -287,6 +299,13 @@ button:hover .arrow:before {
 /* fin DOGHEAD */
 /* début section avis */
 
+.avis-title {
+    color: var(--color-troisieme);
+    text-decoration: underline var(--color-second);
+    text-align: left;
+    padding: 25px;
+    margin-left: 35px;
+}
 
 .avis-rubrique {
     display: flex;
@@ -403,23 +422,12 @@ button:hover .arrow:before {
 /* fin section avis */
 /* Début section Compteur */
 
-.compteur {
+.sectionNumbers {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 25px;
-}
-
-.compteur p {
-    font-family: 'Times New Roman', Times, serif;
-    border: solid 1px var(--color-second);
-    font-size: 37;
-    border: 1px solid black;
-}
-
-.chiffre {
-    color: red;
 }
 
 .toutou {
@@ -428,6 +436,40 @@ button:hover .arrow:before {
     border-radius: 15px;
 }
 
+.sectionNumbers {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .sectionNumbers {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.sectionNumbers__item {
+    padding: 25px;
+    font-size: 21px;
+    min-width: 28px;
+}
+
+.sectionNumbers__item p {
+    margin-top: 1rem;
+}
+
+.sectionNumbers__number {
+    font-size: 61px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    color: rgb(244, 158, 47);
+}
+
+.sectionNumbers p {
+    font-family: Georgia, serif;
+    font-size: 37;
+}
 
 /* story*/
 .histoire {
@@ -462,3 +504,35 @@ footer {
 }
 
 /* Fin Footer */
+
+/* Page Service */
+.service{
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Canicross */
+.service-title {
+    color: white;
+    background-color: var(--color-troisieme);
+    width: 60%;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-size: large;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+.service-title2 {
+    text-align: left;
+    margin: 25px;
+    border-bottom: 2px solid var(--color-troisieme);
+    display: inline-block;
+    padding-right: 200px;
+}
+
+/* Fin canicross */
+
