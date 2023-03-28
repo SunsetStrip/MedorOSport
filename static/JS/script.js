@@ -31,24 +31,27 @@ burger.addEventListener("click", visible);
         let n = nb;
         let cpt = 0;
         let delay = 1000;
-        let delta = Math.ceil((delay * 15000) / n);
+        let delta = Math.ceil(delay / n) * 2;
+        console.log('delta =' + delta + '  ' + '')
 
         function countdownNumbers() {
-            numbers.innerHTML = ++cpt;
+            if (cpt < n - 250) {
+                numbers.innerHTML = cpt += 10;
+            } else {
+                numbers.innerHTML = ++cpt;
+            }
             if (cpt < n) {
-                setTimeout(countdownNumbers, numbers);
+                setTimeout(countdownNumbers, delta);
             }
         }
 
         document.addEventListener('scroll', function () {
             sectionCounter++;
             if (sectionCounter == 1) {
-                setTimeout(countdownNumbers, numbers);
+                countdownNumbers();
             }
         }), { passive: true };
     }
-    setTimeout(function () {
-        incrementNumber("number1", 2871);
-        incrementNumber("number2", 644);
-    }, 2000);
+    incrementNumber("number1", 2871);
+    incrementNumber("number2", 644);
 })();
