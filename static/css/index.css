@@ -506,16 +506,31 @@ footer {
 /* Fin Footer */
 
 /* Page Service */
-.service{
+.service {
     margin: 20px;
     padding: 20px;
 }
+
+/* Style bouton */
+
+.button-reservation {
+    display: inline-block;
+    background-color: var(--color-second);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: initial;
+    font-weight: 100;
+}
+/* Fin style bouton */
 
 /* Canicross */
 .service-title {
     color: white;
     background-color: var(--color-troisieme);
-    width: 60%;
+    width: 90%;
     border-radius: 5px;
     text-align: center;
     margin-left: auto;
@@ -524,22 +539,45 @@ footer {
     font-size: large;
     font-weight: 500;
     margin-top: 35px;
+    clear: both;
 }
 
 .service-title2 {
     text-align: left;
     margin: 25px;
     border-bottom: 2px solid var(--color-troisieme);
-    display: inline-block;
     padding-right: 200px;
+    clear: both;
+    color: var(--color-second);
+}
+
+.service p {
+    text-align: left;
+    float: left;
+    width: 60%;
+    padding-bottom: 15px;
+}
+
+.service img {
+    width: 35%;
+    height: 35%;
+    padding: 15px;
+    margin: 10px;
+    text-align: right;
+    float: right;
 }
 
 /* Fin canicross */
 
 /* contact */
 
+.contact-info {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
 .contact-form {
-    max-width: 60%;
+    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
     background-color: #f2f2f2;
@@ -575,14 +613,16 @@ textarea {
     width: 200px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
     outline: none;
     box-shadow: 0 0 5px #1D3557;
     transform: scale(1.05);
@@ -591,7 +631,7 @@ textarea {
 
 .contact-form button[type="submit"] {
     background-color: #1D3557;
-    color:#f2f2f2;
+    color: #f2f2f2;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -602,6 +642,37 @@ textarea {
 .contact-form button[type="submit"]:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
+}
+
+/* Style pour la section FAQ */
+.FAQ {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.FAQ h2 {
+    margin-bottom: 50px auto;
+    padding-bottom: 20px;
+}
+
+
+
+/* Style pour les titres des questions */
+.question h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+/* Style pour les réponses des questions */
+.question p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 /* fin contact */

@@ -100,6 +100,9 @@ def connexion():
 def formulaire_chien():
    return render_template("Testdesgars/formulaire_chien.html")
 
+@app.route("/testform")
+def testform():
+   return render_template("testform.html")
 # @app.route("/calendrier")
 # def calendrier():
    # return render_template("Testdesgars/calendrier.html")
