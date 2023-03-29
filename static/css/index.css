@@ -551,21 +551,25 @@ footer {
     color: var(--color-second);
 }
 
-.service p {
+.service-p {
     text-align: left;
     float: left;
     width: 60%;
     padding-bottom: 15px;
+    display: block;
 }
 
-.service img {
+.service-img {
     width: 35%;
     height: 35%;
     padding: 15px;
     margin: 10px;
     text-align: right;
+    display: block;
     float: right;
 }
+
+
 
 /* Fin canicross */
 
@@ -592,7 +596,6 @@ footer {
 .contact-form .heading {
     font-size: 24px;
     color: black;
-    ;
     margin-bottom: 12px;
     font-weight: bold;
     display: block;
