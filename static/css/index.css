@@ -610,7 +610,21 @@ footer {
     text-align: center;
     clear: both;
 }
+.olivia p {
+    color: red;
+    float: right;
+    width: 50%;
+}
+.olivia img{
+    float: left;
+}
 
+.aurel p img {
+    clear: both;
+}
+.hadrien {
+
+}
 
 /* contact */
 
