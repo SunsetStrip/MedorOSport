@@ -21,9 +21,9 @@
             margin-bottom: 30px;
             margin-left: auto;
             margin-right: auto;
-            width:200%;
+            width: 200%;
             height: fit-content;
-            background:white;
+            background: white;
             box-shadow: 0px 187px 75px rgba(94, 58, 58, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             max-width: 550px;
@@ -43,10 +43,11 @@
             grid-template-columns: 33% 34% 33%;
             gap: 20px;
             padding: 10px;
+          
         }
 
-        .taille-chien button {
-            height: 55px;
+        .taille-chien button{
+            height: 85px;
             background: #F2F2F2;
             border-radius: 11px;
             padding: 0;
@@ -54,9 +55,7 @@
             outline: none;
         }
 
-        .taille-chien button svg {
-            height: 18px;
-        }
+       
 
         .taille-chien button:last-child svg {
             height: 22px;
@@ -64,10 +63,11 @@
 
         .separator {
             width: calc(100% - 20px);
+
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
             gap: 10px;
-            color: #8B8E98;
+            color: #2b3043;
             margin: 0 10px;
         }
 
@@ -76,8 +76,7 @@
             display: block;
             text-align: center;
             font-weight: 600;
-            font-size: 11px;
-            margin: auto;
+            margin: 20px;
         }
 
         .separator .line {
@@ -137,8 +136,8 @@
         }
 
         .purchase--btn {
-            
-        
+
+
             margin-left: auto;
             margin-right: auto;
             height: 55px;
@@ -148,11 +147,11 @@
             outline: none;
             color: #ffffff;
             font-size: 13px;
-            font-weight: 700; 
-            background:blue;
+            font-weight: 700;
+            background: blue;
             box-shadow: 0px 0px 0px 0px #FFFFFF, 0px 0px 0px 0px #000000;
             transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
-            text-align:center;
+            text-align: center;
         }
 
         .purchase--btn:hover {
@@ -177,26 +176,20 @@
     <!--NAVBAR-->
     {{ navigation() }}
     <!-- Image page -->
-   
+
     <div class="modal">
         <div class="separator">
             <hr class="line">
-            <p>Mon chien est plutôt</p>
+            <p>Comment est votre chien ?</p>
             <hr class="line">
         </div>
         <form class="form">
             <div class="taille-chien">
-                <button name="paypal" type="button">
-                  
-                </button>
-                <button name="apple-pay" type="button">
-                    
-                </button>
-                <button name="google-pay" type="button">
-                    
-                </button>
+                <input name="paypal" type="input"></input>
+                <input name="apple-pay" type="input"></input>
+                <input name="google-pay" type="input"></input>
             </div>
-           
+
             <div class="credit-card-info--form">
                 <div class="input_container">
                     <label for="password_field" class="input_label">Nom de votre chien</label>
@@ -209,7 +202,7 @@
                         placeholder="Race">
                 </div>
                 <div class="input_container">
-                    <label for="password_field" class="input_label">Âge de votre chien/label>
+                    <label for="password_field" class="input_label">Âge de votre chien</label>
                     <div class="split">
                         <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date"
                             placeholder="Âge">
