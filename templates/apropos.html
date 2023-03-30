@@ -7,57 +7,6 @@
     <title>A propos</title>
     <!-- Import Javascript -->
     {% from "macros.html" import navigation, Footer, javascript %}
-
-    <style>
-        .content-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-
-        .content-wrapper,
-        .content-olivia,
-        .content-aurel {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 98%;
-            justify-content: space-evenly;
-            margin: 0 auto;
-        }
-
-        .text-content {
-            width: 70%;
-            padding: 10px;
-            text-align: justify;
-        }
-
-        .storytelling {
-            max-width: 30%;
-            border-radius: 10px;
-        }
-        .storytelling_2 {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            .text-content {
-                width: 100%;
-            }
-
-            .storytelling {
-                max-width: 70%;
-                margin: 0 auto;
-                padding-top: 25px;
-                padding-bottom: 25px;
-            }
-        }
-    </style>
 </head>
 
 <header>
@@ -70,7 +19,7 @@
 <body>
     <!-- L'idée -->
     <section class="Apropos">
-        <h2 class="content-title">L'idée</h2>
+        <h2 class="idee-title">L'idée</h2>
         <div class="content-wrapper">
             <div class="text-content">
                 <p>Amoureux des chiens, en particulier des chiens actifs. Nous avons pratiqué différentes activités avec
@@ -106,33 +55,40 @@
             <div class="content-aurel">
                 <div class="text-content">
                     <p>
-                        Aurélien est un éducateur canin expérimenté et comportementaliste canin passionné. Avec plusieurs années d'expérience dans le domaine, il a acquis une solide connaissance des comportements canins et une expertise en matière de formation et de résolution de problèmes comportementaux. Il a une
+                        Aurélien est un éducateur canin expérimenté et comportementaliste canin passionné. Avec
+                        plusieurs années d'expérience dans le domaine, il a acquis une solide connaissance des
+                        comportements canins et une expertise en matière de formation et de résolution de problèmes
+                        comportementaux. Il a une
                         approche douce et positive pour enseigner aux chiens de tous âges et races, et travaille en
-                        étroite collaboration avec les propriétaires pour les aider à construire une relation forte et durable avec leur animal de compagnie.
+                        étroite collaboration avec les propriétaires pour les aider à construire une relation forte et
+                        durable avec leur animal de compagnie.
                     </p>
                 </div>
                 <img class="storytelling_2" src="static\img\aurel.jpg" alt="aurel">
             </div>
         </div>
         <div class="content-hadrien">
-            <div></div>
-            <p>Hadrien est un éducateur canin expérimenté qui se spécialise dans la formation de chiots. Avec
-                plusieurs années d'expérience, il a acquis une solide connaissance des besoins et des comportements
-                des chiens. Il est passionné par son travail et adore voir les progrès de ses élèves canins. Hadrien
-                est patient, doux et créatif dans ses méthodes d'enseignement, ce qui lui permet de s'adapter à
-                chaque chiot individuel et de les aider à atteindre leur plein potentiel. Il est également déterminé
-                à travailler en étroite collaboration avec les propriétaires pour garantir le succès de leur
-                formation.</p>
-            <img src="static\img\hadri.jpg" alt="hadrien">
+            <img class="storytelling_2" src="static\img\hadri.jpg" alt="hadrien">
+            <div class="text-content">
+                <p>Hadrien est un éducateur canin expérimenté qui se spécialise dans la formation de chiots. Avec
+                    plusieurs années d'expérience, il a acquis une solide connaissance des besoins et des comportements
+                    des chiens. Il est passionné par son travail et adore voir les progrès de ses élèves canins. Hadrien
+                    est patient, doux et créatif dans ses méthodes d'enseignement, ce qui lui permet de s'adapter à
+                    chaque chiot individuel et de les aider à atteindre leur plein potentiel. Il est également déterminé
+                    à travailler en étroite collaboration avec les propriétaires pour garantir le succès de leur
+                    formation.</p>
+            </div>
         </div>
-        <div class="nicolas">
-            <p>Nicolas est un éducateur canin expérimenté spécialisé dans les bergers allemands. Avec plusieurs
-                années d'expérience dans la formation de chiens de race, il a développé une solide connaissance des
-                besoins et des comportements de ces animaux. Grâce à sa patience et sa détermination, Nicolas est
-                capable de travailler avec les propriétaires pour aider leur chien à atteindre leur plein potentiel.
-                Il a une passion pour la formation et le développement de chiens heureux et bien éduqués, et il a
-                une excellente réputation dans la communauté canine pour ses résultats positifs.</p>
-            <img src="static\img\nico.jpg" alt="nico">
+        <div class="content-nicolas">
+            <div class="text-content">
+                <p>Nicolas est un éducateur canin expérimenté spécialisé dans les bergers allemands. Avec plusieurs
+                    années d'expérience dans la formation de chiens de race, il a développé une solide connaissance des
+                    besoins et des comportements de ces animaux. Grâce à sa patience et sa détermination, Nicolas est
+                    capable de travailler avec les propriétaires pour aider leur chien à atteindre leur plein potentiel.
+                    Il a une passion pour la formation et le développement de chiens heureux et bien éduqués, et il a
+                    une excellente réputation dans la communauté canine pour ses résultats positifs.</p>
+            </div>
+            <img class="storytelling_2" src="static\img\nico.jpg" alt="nico">
         </div>
         </div>
         <div class="valeurs">
