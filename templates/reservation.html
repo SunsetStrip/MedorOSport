@@ -1,120 +1,128 @@
-<!DOCTYPE html>
-<html lang="fr">
+<<!DOCTYPE html>
+    <html lang="fr">
 
-<head>
-  <meta charset="" UTF-8">
-  <meta http-equiv="X-UA-compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
       initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-  <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
-  <title>Réserver</title>
-  <!-- Import Javascript -->
-  {% from "macros.html" import navigation, Footer, javascript %}
+        <title>Services</title>
+        <!--CSS STYLE-->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+        <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
+        <!--FAVICON-->
 
+        <!-- Import Javascript -->
+        {% from "macros.html" import navigation, Footer, javascript %}
+        
+    </head>
 
-</head>
+    <body>
 
-<header>
-  <h1>Médor au sport</h1>
-  <!-- Début Nav Bar -->
-  {{ navigation() }}
-  <!-- Fin nav bar -->
-</header>
+        <!--NAVBAR-->
+        {{ navigation() }}
+        <!-- Image page -->
 
-<body>
+        <div class="modal">
+            <div class="separator">
+                <hr class="line">
+                <p>Comment est votre chien ?</p>
+                <hr class="line">
+            </div>
+            <form class="form">
+                <div class="taille-chien">
+                    <label>
+                        <input class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="radio-icon">
 
-  <!-- Formulaire d'enregistrement du formulaire du chien -->
-  <form action="" method="get" class="formulaire-chien">
-    <legend>> Profil de votre chien</legend>
+                            </span>
+                            <span class="radio-label">Petit chien <br>(-5kg)</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input checked="" class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="radio-icon">
 
-    <!-- proprioChien -->
-    <div class="formulaire-chien">
-      <label for="Nom du propriétaire">Nom du propriétaire :</label>
-      <input type="text" name="proprioChien" id="proprioChien" required>
+                            </span>
+                            <span class="radio-label">Chien moyen <br> (5-10kg)</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input class="radio-input" type="radio" name="engine">
+                        <span class="radio-tile">
+                            <span class="radio-icon">
 
-      <!-- nomChien -->
-      <div class="formulaire-chien">
-        <label for="nom">Nom du chien : </label>
-        <input type="text" name="nomChien" id="nomChien" required>
-      </div>
+                            </span>
+                            <span class="radio-label">Gros chien <br>(+10kg)</span>
+                        </span>
+                    </label>
+                </div>
 
-      <!-- raceChien -->
-      <div class="formulaire-chien">
-        <label for="race">Race du chien</label>
-        <input type="text" name="raceChien" id="raceChien" required>
-      </div>
+                <div class="credit-card-info--form">
+                    <div class="input_container">
+                        <label for="password_field" class="input_label">Nom de votre chien</label>
+                        <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title"
+                            placeholder="Nom">
+                    </div>
+                    <div class="input_container">
+                        <label for="password_field" class="input_label">Race de votre chien</label>
+                        <input id="password_field" class="input_field" type="number" name="input-name"
+                            title="Inpit title" placeholder="Race">
+                    </div>
+                    <div class="input_container">
+                        <label for="password_field" class="input_label">Âge de votre chien</label>
+                        <div class="split">
+                            <input id="password_field" class="input_field" type="text" name="input-name"
+                                title="Expiry Date" placeholder="Âge">
+                        </div>
+                    </div>
+                </div>
+                <div class="radio-container">
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option1">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Petit marcheur</span>
+                        </label>
+                    </div>
 
-      <!-- ageChien -->
-      <div class="formulaire-chien">
-        <label for="age">Age du chien</label>
-        <input type="number" name="ageChien" id="ageChien" min=0 max=30 required>
-      </div>
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option2">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Promeneur</span>
+                        </label>
+                    </div>
 
-      <!-- poidsChien -->
-      <div class="formulaire-chien">
-        <fieldset>
-          <legend>Poids de votre chien :</legend>
-          <input type="radio" name="poidsChien1" id="poidsChien1">
-          <label for="poidsChien">Moins de 5kg</label></br>
-          <input type="radio" name="poidsChien2" id="poidsChien2">
-          <label for="poidsChien">Entre 5 et 10kg</label></br>
-          <input type="radio" name="poidsChien3" id="poidsChien3">
-          <label for="poidsChien">Plus de 10kg</label></br>
-        </fieldset>
-      </div>
+                    <div class="radio-wrapper">
+                        <label class="radio-button">
+                            <input type="radio" name="radio-group" id="option3">
+                            <span class="radio-checkmark"></span>
+                            <span class="radio-label">Energique</span>
+                        </label>
+                    </div>
+                        <div class="radio-wrapper">
+                            <label class="radio-button">
+                                <input type="radio" name="radio-group" id="option4">
+                                <span class="radio-checkmark"></span>
+                                <span class="radio-label">Inarrétable</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="purchase--btn">Enregistrer</button>
+                </div>
 
-      <!-- sportChien : case à cocher (1 seule option possible)-->
-      <div class="formulaire-chien"></div>
-      <fieldset>
-        <legend>Quel besoin en sport ?</legend>
-        <input type="radio" name="sportChien1" id="sportChien1" value="Petit marcheur">
-        <label for="sportChien2">Petit marcheur</label></br>
-        <input type="radio" name="sportChien2" id="sportChien2">
-        <label for="sportChien">Promeneur</label></br>
-        <input type="radio" name="sportChien3" id="sportChien3">
-        <label for="sportChien">Energique</label></br>
-        <input type="radio" name="sportChien4" id="sportChien4">
-        <label for="sportChien">Inarrétable</label></br>
-      </fieldset>
-    </div>
-    </div>
+                
+            </form>
+        </div>
+        <!-- Script  -->
+        {{ javascript() }}
+        <!-- Fin script -->
+    </body>
+    <!-- Section footer-->
+    {{ Footer() }}
+    <!-- Fin Footer -->
 
-    <!-- Bouton pour envoyer vers la base de données -->
-    <div class="formulaire-chien">
-      <input type="submit" value="Enregistrer">
-    </div>
-
-    <!-- Bloc du calendrier -->
-    <div class="calendrier">
-
-    </div>
-  </form>
-
-
-
-
-
-
-
-
-  <footer>
-    <p>Copyright Médor au sport</p>
-  </footer>
-
-  <!-- Bouton "Remonter en haut de la page / retour au menu") -->
-  <div id="scroll_to_top">
-    <a href="#top"><img src="../static/img/gotop.png" alt="Retourner en haut" /></a>
-  </div>
-
-  <!-- Script -->
-  {{ javascript() }}
-  <!-- Fin script -->
-</body>
-<!-- Section footer-->
-{{ Footer() }}
-<!-- Fin Footer -->
-
-
-
-</html>
+    </html>
