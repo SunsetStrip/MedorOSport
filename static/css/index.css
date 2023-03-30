@@ -646,6 +646,7 @@ footer {
         padding-bottom: 25px;
     }
 }
+
 .valeurs {
     text-align: center;
 }
@@ -660,7 +661,12 @@ footer {
     padding: 100px;
 }
 
-
+.test img {
+    width: 30%;
+    height: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
 
 /* Fin Apropos */
 

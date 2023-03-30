@@ -1,128 +1,128 @@
-<<!DOCTYPE html>
-    <html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
       initial-scale=1.0">
-        <title>Services</title>
-        <!--CSS STYLE-->
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-        <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
-        <!--FAVICON-->
+    <title>Services</title>
+    <!--CSS STYLE-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <link type="image/png" sizes="96x96" rel="icon" href="../static/img/favicon.png">
+    <!--FAVICON-->
 
-        <!-- Import Javascript -->
-        {% from "macros.html" import navigation, Footer, javascript %}
-        
-    </head>
+    <!-- Import Javascript -->
+    {% from "macros.html" import navigation, Footer, javascript %}
 
-    <body>
+</head>
 
-        <!--NAVBAR-->
-        {{ navigation() }}
-        <!-- Image page -->
+<body>
 
-        <div class="modal">
-            <div class="separator">
-                <hr class="line">
-                <p>Comment est votre chien ?</p>
-                <hr class="line">
-            </div>
-            <form class="form">
-                <div class="taille-chien">
-                    <label>
-                        <input class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="radio-icon">
+    <!--NAVBAR-->
+    {{ navigation() }}
+    <!-- Image page -->
 
-                            </span>
-                            <span class="radio-label">Petit chien <br>(-5kg)</span>
-                        </span>
-                    </label>
-                    <label>
-                        <input checked="" class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="radio-icon">
-
-                            </span>
-                            <span class="radio-label">Chien moyen <br> (5-10kg)</span>
-                        </span>
-                    </label>
-                    <label>
-                        <input class="radio-input" type="radio" name="engine">
-                        <span class="radio-tile">
-                            <span class="radio-icon">
-
-                            </span>
-                            <span class="radio-label">Gros chien <br>(+10kg)</span>
-                        </span>
-                    </label>
-                </div>
-
-                <div class="credit-card-info--form">
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Nom de votre chien</label>
-                        <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title"
-                            placeholder="Nom">
-                    </div>
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Race de votre chien</label>
-                        <input id="password_field" class="input_field" type="number" name="input-name"
-                            title="Inpit title" placeholder="Race">
-                    </div>
-                    <div class="input_container">
-                        <label for="password_field" class="input_label">Âge de votre chien</label>
-                        <div class="split">
-                            <input id="password_field" class="input_field" type="text" name="input-name"
-                                title="Expiry Date" placeholder="Âge">
-                        </div>
-                    </div>
-                </div>
-                <div class="radio-container">
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option1">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Petit marcheur</span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option2">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Promeneur</span>
-                        </label>
-                    </div>
-
-                    <div class="radio-wrapper">
-                        <label class="radio-button">
-                            <input type="radio" name="radio-group" id="option3">
-                            <span class="radio-checkmark"></span>
-                            <span class="radio-label">Energique</span>
-                        </label>
-                    </div>
-                        <div class="radio-wrapper">
-                            <label class="radio-button">
-                                <input type="radio" name="radio-group" id="option4">
-                                <span class="radio-checkmark"></span>
-                                <span class="radio-label">Inarrétable</span>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="purchase--btn">Enregistrer</button>
-                </div>
-
-                
-            </form>
+    <div class="modal">
+        <div class="separator">
+            <hr class="line">
+            <p>Comment est votre chien ?</p>
+            <hr class="line">
         </div>
-        <!-- Script  -->
-        {{ javascript() }}
-        <!-- Fin script -->
-    </body>
-    <!-- Section footer-->
-    {{ Footer() }}
-    <!-- Fin Footer -->
+        <form class="form">
+            <div class="taille-chien">
+                <label>
+                    <input class="radio-input" type="radio" name="engine">
+                    <span class="radio-tile">
+                        <span class="radio-icon">
 
-    </html>
+                        </span>
+                        <span class="radio-label">Petit chien <br>(-5kg)</span>
+                    </span>
+                </label>
+                <label>
+                    <input checked="" class="radio-input" type="radio" name="engine">
+                    <span class="radio-tile">
+                        <span class="radio-icon">
+
+                        </span>
+                        <span class="radio-label">Chien moyen <br> (5-10kg)</span>
+                    </span>
+                </label>
+                <label>
+                    <input class="radio-input" type="radio" name="engine">
+                    <span class="radio-tile">
+                        <span class="radio-icon">
+
+                        </span>
+                        <span class="radio-label">Gros chien <br>(+10kg)</span>
+                    </span>
+                </label>
+            </div>
+
+            <div class="credit-card-info--form">
+                <div class="input_container">
+                    <label for="password_field" class="input_label">Nom de votre chien</label>
+                    <input id="password_field" class="input_field" type="text" name="input-name" title="Inpit title"
+                        placeholder="Nom">
+                </div>
+                <div class="input_container">
+                    <label for="password_field" class="input_label">Race de votre chien</label>
+                    <input id="password_field" class="input_field" type="number" name="input-name" title="Inpit title"
+                        placeholder="Race">
+                </div>
+                <div class="input_container">
+                    <label for="password_field" class="input_label">Âge de votre chien</label>
+                    <div class="split">
+                        <input id="password_field" class="input_field" type="text" name="input-name" title="Expiry Date"
+                            placeholder="Âge">
+                    </div>
+                </div>
+            </div>
+            <div class="radio-container">
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input type="radio" name="radio-group" id="option1">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Petit marcheur</span>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input type="radio" name="radio-group" id="option2">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Promeneur</span>
+                    </label>
+                </div>
+
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input type="radio" name="radio-group" id="option3">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Energique</span>
+                    </label>
+                </div>
+                <div class="radio-wrapper">
+                    <label class="radio-button">
+                        <input type="radio" name="radio-group" id="option4">
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Inarrétable</span>
+                    </label>
+                </div>
+            </div>
+            <button class="purchase--btn">Enregistrer</button>
+    </div>
+
+
+    </form>
+    </div>
+    <!-- Script  -->
+    {{ javascript() }}
+    <!-- Fin script -->
+</body>
+<!-- Section footer-->
+{{ Footer() }}
+<!-- Fin Footer -->
+
+</html>
