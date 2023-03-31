@@ -29,25 +29,25 @@
       <div>
          <a href="/apropos">
             <img src="{{ url_for('static', filename='picto/compteparticulier.png') }}" alt="profiltetechien"
-               loading="lazy" class="reservation">
+               loading="lazy" class="reservation"> <button><a href="/apropos">Mon chien</a>
+               <div class="arrow-wrapper">
+                  <div class="arrow"></div>
+               </div>
+            </button>
          </a>
-         <button><a href="/apropos">Mon chien</a>
-            <div class="arrow-wrapper">
-               <div class="arrow"></div>
-            </div>
-         </button>
+
       </div>
       <div>
          <a href="reservation">
             <img src="{{ url_for('static', filename='picto/reservation.png') }}" alt="reservation" loading="lazy"
-               class="reservation">
+               class="reservation"><button>
+               Réservation
+               <div class="arrow-wrapper">
+                  <div class="arrow"></div>
+               </div>
+            </button>
          </a>
-         <button>
-            Réservation
-            <div class="arrow-wrapper">
-               <div class="arrow"></div>
-            </div>
-         </button>
+
       </div>
    </div>
    <!-- fin de la section DOGHEAD-->
