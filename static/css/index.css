@@ -623,8 +623,8 @@ footer {
 }
 
 .storytelling_2 {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 50%;
@@ -944,6 +944,7 @@ footer {
 .radio-container {
 
     max-width: 300px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
